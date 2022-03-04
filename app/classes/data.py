@@ -25,7 +25,7 @@ class User(UserMixin, Document):
         self.password_hash = generate_password_hash(password)
 
     def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
+         return check_password_hash(self.password_hash, password)
 
     def get_reset_password_token(self, expires_in=600):
         id=str(self.id)
